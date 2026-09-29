@@ -1,13 +1,6 @@
 
-document.querySelector('.menu')?.addEventListener('click',()=>document.querySelector('.navlinks').classList.toggle('open'));
-
-
-const callBar = document.querySelector('.callbar');
-if (callBar) {
-  const toggleCallBar = () => {
-    if (window.scrollY > 180) callBar.classList.add('visible');
-    else callBar.classList.remove('visible');
-  };
-  toggleCallBar();
-  window.addEventListener('scroll', toggleCallBar, { passive: true });
-}
+const menu=document.getElementById("menu"),nav=document.getElementById("navlinks");
+if(menu&&nav)menu.addEventListener("click",()=>nav.classList.toggle("open"));
+const bar=document.querySelector(".callbar");
+const toggleBar=()=>{if(!bar)return;bar.classList.toggle("visible",window.scrollY>220)};
+toggleBar();window.addEventListener("scroll",toggleBar,{passive:true});
