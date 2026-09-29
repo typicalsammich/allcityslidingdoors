@@ -130,3 +130,27 @@ footer .sunset-skyline{display:none!important}
  .poster-photo{margin-top:76px}
  .hero-phone{left:auto!important;right:0!important;width:auto!important}
 }
+
+
+/* Desktop footer sunset visibility fix */
+@media(min-width:801px){
+  footer{
+    min-height:430px !important;
+    padding-bottom:185px !important;
+    background:
+      linear-gradient(
+        to bottom,
+        #050a10 0%,
+        #050a10 30%,
+        rgba(5,10,16,.92) 43%,
+        rgba(5,10,16,.52) 58%,
+        rgba(5,10,16,.12) 76%,
+        rgba(5,10,16,0) 100%
+      ),
+      url("assets/footer-sunset-palms.png") center bottom / 100% auto no-repeat !important;
+  }
+  footer .footer-grid{
+    position:relative;
+    z-index:2;
+  }
+}
